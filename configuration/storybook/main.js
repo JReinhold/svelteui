@@ -3,17 +3,17 @@ import { mergeConfig } from 'vite';
 
 export default {
 	stories: [
-		'../../packages/{svelteui-composables,svelteui-core,svelteui-dates}/src/**/*.mdx',
-		'../../packages/{svelteui-composables,svelteui-core,svelteui-dates}/src/**/*.stories.@(js|jsx|ts|tsx|svelte)'
+		// '../../packages/{svelteui-composables,svelteui-core,svelteui-dates}/src/**/*.mdx',
+		// '../../packages/{svelteui-composables,svelteui-core,svelteui-dates}/src/**/*.stories.@(js|jsx|ts|tsx|svelte)'
+		'../../packages/svelteui-core/src/components/Breadcrumbs/*.stories.@(js|jsx|ts|tsx|svelte)'
 	],
 	addons: [
 		'@storybook/addon-links',
 		'@storybook/addon-essentials',
 		'@storybook/addon-interactions',
-		'@storybook/addon-svelte-csf',
-		'storybook-dark-mode'
+		'@storybook/addon-svelte-csf'
 	],
-	framework: '@storybook/svelte-vite',
+	framework: '@storybook/sveltekit',
 	async viteFinal(config) {
 		return mergeConfig(config, {
 			resolve: {
@@ -30,11 +30,7 @@ export default {
 				}
 			},
 			define: {
-				...config.define,
 				global: 'window'
-			},
-			optimizeDeps: {
-				include: ['storybook-dark-mode']
 			}
 		});
 	},

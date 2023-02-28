@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import addons from '@storybook/addons';
-	import { DARK_MODE_EVENT_NAME } from 'storybook-dark-mode';
+	import { addons } from '@storybook/addons';
 	import { SvelteUIProvider } from '@svelteuidev/core';
 	import type { ColorScheme } from '@svelteuidev/core';
 
@@ -10,7 +9,8 @@
 
 	onMount(() => {
 		channel = addons.getChannel();
-		channel.on(DARK_MODE_EVENT_NAME, setTheme);
+		// TODO: what to do here?
+		// channel.on(DARK_MODE_EVENT_NAME, setTheme);
 	});
 
 	function setTheme(isDark) {

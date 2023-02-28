@@ -14,7 +14,7 @@
 	</Breadcrumbs>
 </Template>
 
-<Story name="Breadcrumbs" />
+<Story name="Breadcrumbs" id="main" />
 
 <Story name="Icon">
 	<Breadcrumbs size="md">
