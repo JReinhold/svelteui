@@ -1,10 +1,9 @@
-<script lang="ts">
-	import type { SvelteUINumberSize } from '$lib/styles';
+<script>
 	import { Meta, Template, Story } from '@storybook/addon-svelte-csf';
 	import { ChipGroup } from '../index';
 
-	const spacings: SvelteUINumberSize[] = ['xs', 'sm', 'md', 'lg', 'xl'];
-	const directions: ('column' | 'row')[] = ['column', 'row'];
+	const spacings = ['xs', 'sm', 'md', 'lg', 'xl'];
+	const directions = ['column', 'row'];
 
 	let bindValue;
 </script>

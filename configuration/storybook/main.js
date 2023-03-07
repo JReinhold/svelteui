@@ -3,9 +3,12 @@ import { mergeConfig } from 'vite';
 
 export default {
 	stories: [
-		// '../../packages/{svelteui-composables,svelteui-core,svelteui-dates}/src/**/*.mdx',
-		// '../../packages/{svelteui-composables,svelteui-core,svelteui-dates}/src/**/*.stories.@(js|jsx|ts|tsx|svelte)'
-		'../../packages/svelteui-core/src/components/Breadcrumbs/*.stories.@(js|jsx|ts|tsx|svelte)'
+		'../../packages/svelteui-core/src/**/*.mdx',
+		'../../packages/svelteui-core/src/**/*.stories.@(js|jsx|ts|tsx|svelte)',
+		'../../packages/svelteui-composables/src/**/*.mdx',
+		'../../packages/svelteui-composables/src/**/*.stories.@(js|jsx|ts|tsx|svelte)',
+		'../../packages/svelteui-dates/src/**/*.mdx',
+		'../../packages/svelteui-dates/src/**/*.stories.@(js|jsx|ts|tsx|svelte)'
 	],
 	addons: [
 		'@storybook/addon-links',
@@ -35,6 +38,6 @@ export default {
 		});
 	},
 	docs: {
-		autodocs: true
+		autodocs: 'tag'
 	}
 };

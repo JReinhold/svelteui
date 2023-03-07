@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import { Meta, Template, Story } from '@storybook/addon-svelte-csf';
 	import { move } from './index';
 
@@ -8,7 +8,7 @@
 	function handleMoveStart() {
 		moving = true;
 	}
-	function handleMove(event: { detail: { x: number; y: number } }) {
+	function handleMove(event) {
 		position = event.detail;
 	}
 	function handleMoveStop() {

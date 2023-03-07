@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import { Meta, Template, Story } from '@storybook/addon-svelte-csf';
 	import { Button, Text, Paper, Stack, TextInput } from '@svelteuidev/core';
 	import { focustrap } from '../../actions/use-focus-trap';
@@ -10,7 +10,7 @@
 
 	$: handleFocusReturn(active);
 
-	function handleKeyDown(event: KeyboardEvent) {
+	function handleKeyDown(event) {
 		if (event.code === 'Escape') {
 			active = false;
 		}

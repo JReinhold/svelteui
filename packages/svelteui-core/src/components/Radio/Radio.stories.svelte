@@ -1,11 +1,10 @@
-<script lang="ts">
+<script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf';
-	import type { SvelteUINumberSize } from '$lib/styles';
 	import RadioGroup from './RadioGroup/RadioGroup.svelte';
 	import { Radio } from './index';
 
-	const spacings: SvelteUINumberSize[] = ['xs', 'sm', 'md', 'lg', 'xl'];
-	const directions: ('column' | 'row')[] = ['column', 'row'];
+	const spacings = ['xs', 'sm', 'md', 'lg', 'xl'];
+	const directions = ['column', 'row'];
 
 	let bindValue = 'three';
 	let bindGroup = 'two';
